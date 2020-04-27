@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add bodyparser
+
+PATH: 
+  C:\Users\Kaelon\Desktop\cmder\bin;C:\Users\Kaelon\Desktop\cmder\vendor\bin;C:\Users\Kaelon\Desktop\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\Kaelon\Desktop\cmder\vendor\conemu-maximus5;C:\Users\Kaelon\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\Kaelon\AppData\Local\Microsoft\WindowsApps;C:\Users\Kaelon\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Kaelon\AppData\Local\atom\bin;C:\Program Files\JetBrains\PyCharm 2019.3.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.4\bin;;C:\Program Files\JetBrains\WebStorm 2019.3.4\bin;;C:\Users\Kaelon\AppData\Local\Yarn\bin;C:\Users\Kaelon\AppData\Roaming\npm;C:\Users\Kaelon\Desktop\cmder
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/bodyparser: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:310:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:310:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:416:28)
+      at IncomingMessage.emit (events.js:322:22)
+      at endReadableNT (_stream_readable.js:1187:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "middleware": "^1.0.0",
+      "pg": "^8.0.3",
+      "sequelize": "^5.21.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
