@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
     title: DataTypes.STRING,
     description: DataTypes.STRING,
     year: DataTypes.INTEGER,
-    length: DataTypes.STRING,
+    time: DataTypes.STRING,
     rating: DataTypes.INTEGER,
     owner: DataTypes.INTEGER,
   });

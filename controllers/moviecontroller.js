@@ -5,25 +5,33 @@ const Movie = sequelize.import("../models/movies");
 const User = sequelize.import("../models/user.js");
 
 router.post("/createfav", function (req, res) {
-  let name = req.body.movie.name;
+  let title = req.body.movie.title;
   let year = req.body.movie.year;
-  let length = req.body.movie.length;
+  let time = req.body.movie.time;
   let favorite = req.body.movie.favorite;
+  let description = req.body.movie.description;
+  let rating = req.body.movie.rating;
 
   let owner = req.user.id;
 
   Movie.create({
     favorite: favorite,
-    name: name,
+    title: title,
+    description: description,
     year: year,
-    length: length,
+    rating: rating,
+    time: time,
     owner: owner,
   }).then(
     (createMovie = (data) => {
-      res.json({
-        movies: data,
-        message: "created movie in favorites",
-      });
+      if (favorite == !true) {
+        res.json({ movies: data, message: "removed movie from favorites" });
+      } else {
+        res.json({
+          movies: data,
+          message: "created movie in favorites",
+        });
+      }
     }),
     (createError = (err) => {
       res.send(500, err.message);
@@ -75,6 +83,7 @@ router.put("/update/:id", (req, res) => {
     })
   );
 });
+
 // commented out the info the user IDs
 router.delete("/delete/:id", (req, res) => {
   let data = req.params.id;
