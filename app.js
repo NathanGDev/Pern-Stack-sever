@@ -19,6 +19,6 @@ app.use(require("./middleware/validate-session"));
 
 app.use("/api/movies", movie);
 
-app.listen(1337, function () {
+app.listen(process.env.PORT, function () {
   console.log("Server is running on port 1337");
 });
