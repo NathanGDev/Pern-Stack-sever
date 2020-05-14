@@ -3,7 +3,13 @@ module.exports = function (sequelize, DataTypes) {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      isUnique: true,
+      validate: {
+        isEmail: true,
+      },
+      unique: {
+        args: true,
+        msg: "Email address already in use!",
+      },
     },
     password: DataTypes.STRING,
     firstName: DataTypes.STRING,

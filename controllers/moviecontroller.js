@@ -7,7 +7,7 @@ const User = sequelize.import("../models/user.js");
 router.post("/createfav", function (req, res) {
   let title = req.body.movie.title;
   let year = req.body.movie.year;
-  let time = req.body.movie.time;
+  let poster = req.body.movie.poster;
   let favorite = req.body.movie.favorite;
   let description = req.body.movie.description;
   let rating = req.body.movie.rating;
@@ -20,7 +20,7 @@ router.post("/createfav", function (req, res) {
     description: description,
     year: year,
     rating: rating,
-    time: time,
+    poster: poster,
     owner: owner,
   }).then(
     (createMovie = (data) => {
@@ -57,16 +57,16 @@ router.put("/update/:id", (req, res) => {
   let owner = req.user.id;
 
   let favorite = req.body.movie.favorite;
-  let name = req.body.movie.name;
+  let title = req.body.movie.title;
   let year = req.body.movie.year;
-  let length = req.body.movie.length;
+  let rating = req.body.movie.rating;
 
   Movie.update(
     {
       favorite: favorite,
-      name: name,
+      title: title,
       year: year,
-      length: length,
+      rating: rating,
     },
     {
       where: {
